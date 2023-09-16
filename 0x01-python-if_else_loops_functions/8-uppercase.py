@@ -4,7 +4,7 @@ def uppercase(str):
         unicode = ord(character)
         if 123 > unicode > 96:
             unicode -= 32
-            print("{}".format(chr(unicode)), end = "")
+            print("{}".format(chr(unicode)), end="")
         else:
-            print("{}".format(character), end = "")
+            print("{}".format(character), end="")
     print()

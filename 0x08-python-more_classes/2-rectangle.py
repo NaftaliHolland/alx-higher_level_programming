@@ -77,4 +77,6 @@ class Rectangle:
 
         Returns: the pereimeter of the rectangle
         """
-        return 2 * (self.__width + self.__height)
+        if self.__height == 0 and self.__width == 0:
+            return 0
+        return 2 * (self.__height + self.__width)

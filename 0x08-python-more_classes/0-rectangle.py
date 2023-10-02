@@ -1,13 +1,15 @@
+#!/usr/bin/python3
 """This class defines a rectangle
 
-empty for now
+The class is empty for now
 
 """
 
 
 class Rectangle:
-    """this class will contains attributes and methods for a rectangle
+    """This class will contains attributes and methods for a rectangle
 
-    it is still empty for now
+    Still empty implementation will be done later
+
     """
     pass

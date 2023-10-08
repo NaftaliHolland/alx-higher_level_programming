@@ -1,0 +1,22 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(2, 4)
+6
+
+>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer missing 1 required positional argument: 'a'
+
+SyntaxError: invalid syntax
+>>> add_integer("a", 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: a must be an integer
+
+>>> add_integer(2, "b")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: b must be an integer
+

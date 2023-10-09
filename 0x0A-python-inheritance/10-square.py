@@ -10,4 +10,6 @@ class Square(Rectangle):
         """initializes width and height"""
 
         self.__size = size
+        if super().integer_validator("size", size):
+            self.__size = size
         super().__init__(size, size)

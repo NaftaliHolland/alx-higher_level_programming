@@ -24,6 +24,7 @@ class Student:
                     continue
                 new_dict[attr] = self.__dict__[attr]
 
-            return new_dict
+            if len(new_dict) > 0:
+                return new_dict
 
         return self.__dict__

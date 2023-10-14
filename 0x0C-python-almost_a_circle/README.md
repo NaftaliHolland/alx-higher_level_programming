@@ -1,0 +1,1 @@
+This folder contains files and folders for alx higher level programming tasks on python almost a circle where I get to review the following python concepts: Import, Exceptions, Class, Private attribute, Geter, Setter, class method, static method, inheritance, Unittest, Read/Write file

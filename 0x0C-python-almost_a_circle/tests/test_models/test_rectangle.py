@@ -54,5 +54,18 @@ class TestRectangle(unittest.TestCase):
         r4 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r4.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
+    def test_update(self):
+        """updates the Rectangle attributes"""
+
+        r5 = Rectangle(10, 10, 10, 10)
+        r5.update(89)
+        self.assertEqual(r5.id, 89)
+
+        r5.update(89, 2)
+        self.assertEqual(r5.width, 2)
+
+        r5.update(89, 2, 3, 4, 5)
+        self.assertEqual(r5.x, 4)
+
     if __name__ == "__main__":
         unittest.main()

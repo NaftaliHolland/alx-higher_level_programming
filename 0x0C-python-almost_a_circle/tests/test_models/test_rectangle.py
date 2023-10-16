@@ -1,25 +1,27 @@
 #!/usr/bin/python3
 """Module documentation"""
-
 from models.rectangle import Rectangle
 import unittest
+
 
 class TestRectangle(unittest.TestCase):
     """Test class for the Rectangle class"""
 
     def setUp(self):
-        """resets the __nb_objects back to zero before starting any test case"""
+        """resets the __nb_objects back to zero
+        before starting any test case"""
+
         self.__nb_objects = 0
 
     def test_rectangle(self):
         """tests the Rectangle class"""
 
         r1 = Rectangle(10, 3)
-        
+
         self.assertEqual(r1.id, 1)
 
         r1 = Rectangle(2, 10)
-        
+
         self.assertEqual(r1.id, 2)
 
         r1 = Rectangle(10, 2, 0, 0, 15)
@@ -31,13 +33,13 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             r1 = Rectangle(2, 3, -1)
-        
+
         with self.assertRaises(ValueError):
             r1 = Rectangle(2, 3, 1, -1)
 
         with self.assertRaises(TypeError):
             r1 = Rectangle("Hello", 2)
-        
+
         with self.assertRaises(TypeError):
             r1 = Rectangle(2, "Hello")
 

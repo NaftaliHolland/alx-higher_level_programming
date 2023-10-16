@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This module contains a Rectangle class that inherits from base"""
-
-
 from models.base import Base
+
+
 class Rectangle(Base):
     """A simple rectangle class"""
 
@@ -67,14 +67,13 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
     def area(self):
         """Calculates the area of a rectangle
 
         Returns: area
         """
         return self.__width * self.__height
-    
+
     def display(self):
         """prints to stdout the Rectangle instance"""
 
@@ -87,4 +86,10 @@ class Rectangle(Base):
         """overiding the __str__() method to return some useful infomation
         about the Rectangle instance"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id,
+                self.__x,
+                self.__y,
+                self.__width,
+                self.__height
+                )

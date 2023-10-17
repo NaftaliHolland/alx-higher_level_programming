@@ -9,19 +9,19 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes the Rectangle instance"""
 
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
     @property
-    def __width(self):
+    def width(self):
         """width getter"""
         return self.__width
 
-    @__width.setter
-    def __width(self, value):
+    @width.setter
+    def width(self, value):
         """width setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -30,12 +30,12 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def __height(self):
+    def height(self):
         """height getter"""
         return self.__height
 
-    @__height.setter
-    def __height(self, value):
+    @height.setter
+    def height(self, value):
         """height setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -44,12 +44,12 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    def __x(self):
+    def x(self):
         """x getter"""
         return self.__x
 
-    @__x.setter
-    def __x(self, value):
+    @x.setter
+    def x(self, value):
         """x setter"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
@@ -58,12 +58,12 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def __y(self):
+    def y(self):
         """y getter"""
         return self.__y
 
-    @__y.setter
-    def __y(self, value):
+    @y.setter
+    def y(self, value):
         """y setter"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")

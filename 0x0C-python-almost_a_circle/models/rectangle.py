@@ -27,7 +27,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -53,7 +53,7 @@ class Rectangle(Base):
         """x setter"""
         if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -94,7 +94,7 @@ class Rectangle(Base):
                 self.__height
                 )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         if len(args) >= 1:
             self.id = args[0]
@@ -106,3 +106,4 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) == 5:
             self.__y = args[4]
+            

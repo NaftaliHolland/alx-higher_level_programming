@@ -52,3 +52,10 @@ class Base:
             return list()
 
         return list(json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Returns an instance with all attributes set"""
+        dummy = cls(5, 2, 2)
+        dummy.update(dictionary)
+        return dummy

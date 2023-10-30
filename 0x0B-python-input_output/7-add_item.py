@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module documentation"""
+""" This module has a script that adds arguments to a python list"""
 import json
 import sys
 

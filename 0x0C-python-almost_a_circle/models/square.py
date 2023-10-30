@@ -30,6 +30,17 @@ class Square(Rectangle):
                 self.width
                 )
 
+    def update(self, *args, **kwargs):
+        """updates the attribute"""
+        if args is not None and len(args) >= 1:
+            attributes = ["id", "width", "height", "x", "y"]
+
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def to_dictionary(self):
         """retuns the dictionary representation of a Square"""
 

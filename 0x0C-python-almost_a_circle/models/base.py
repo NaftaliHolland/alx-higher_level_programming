@@ -43,3 +43,9 @@ class Base:
                 string = cls.to_json_string(my_list)
 
             f.write(string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation of json_string"""
+
+        return list(json.loads(json_string))

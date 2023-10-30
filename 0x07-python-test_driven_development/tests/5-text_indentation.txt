@@ -1,0 +1,14 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation("""Hello, this is not. My real name. My name is: HOlland Naftali Nyadimo""")
+Hello, this is not.
+
+My real name.
+
+My name is:
+
+HOlland Naftali Nyadimo
+
+>>> text_indentation(34)
+Traceback (most recent call last):
+TypeError: text must be a string

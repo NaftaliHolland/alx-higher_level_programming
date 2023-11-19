@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `second_table`(
 	`score` INT
 	);
 
-INSERT INT `second_table`
+INSERT INTO `second_table`
 VALUES
 (1, "John", 10),
 (2, "Alex", 3),

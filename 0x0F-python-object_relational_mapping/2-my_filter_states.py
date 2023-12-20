@@ -18,7 +18,7 @@ if __name__ == "__main__":
                 charset="utf8"
             )
 
-    query = "SELECT * FROM states WHERE name = '{}'".format(state_name)
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(state_name)
     curs = db_conn.cursor()
     curs.execute(query)
 

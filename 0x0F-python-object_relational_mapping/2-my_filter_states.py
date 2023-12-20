@@ -18,8 +18,9 @@ if __name__ == "__main__":
                 charset="utf8"
             )
 
+    query = "SELECT * FROM states WHERE name = '{}'".format(state_name)
     curs = db_conn.cursor()
-    curs.execute("""SELECT * FROM states WHERE name = %s""", (state_name,))
+    curs.execute(query)
 
     states_found = curs.fetchall()
 

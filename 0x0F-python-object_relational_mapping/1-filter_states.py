@@ -18,11 +18,14 @@ if __name__ == "__main__":
             )
     # Create cursor
     curs = db_conn.cursor()
-    curs.execute("""SELECT * FROM states ORDER BY id ASC""")
+    curs.execute(
+            """SELECT * FROM states
+                WHERE LOCATE(ASCII('N'), ASCII(name)) > 0
+                ORDER BY id ASC"""
+            )
     all_states = curs.fetchall()
     for state in all_states:
-        if "N" in state[1]:
-            print(state)
+        print(state)
 
     # close cursor and connection
     curs.close()

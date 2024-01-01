@@ -34,4 +34,7 @@ if __name__ == "__main__":
         .order_by(State.id.asc()) \
         .first()
 
-    print("{}: {}".format(first_state.id, first_state.name))
+    if first_state:
+        print("{}: {}".format(first_state.id, first_state.name))
+    else:
+        print("Nothing")

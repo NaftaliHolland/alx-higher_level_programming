@@ -10,4 +10,4 @@ if __name__ == "__main__":
         headers = response.headers
         headers = dict(headers)
 
-        print(headers["X-Request-Id"])
+        print(headers.get("X-Request-Id"))

@@ -9,11 +9,11 @@ if __name__ == "__main__":
     email = sys.argv[2]
 
     # Create dictionary with values
-    data = dict()
-    data["email"] = email
+    value = dict()
+    value["email"] = email
 
     # Encode and parse the dictionary
-    data = urllib.parse.urlencode(values)
+    data = urllib.parse.urlencode(value)
     data = data.encode("ascii")
 
     # Make request

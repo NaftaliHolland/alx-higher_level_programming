@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ Sends a POST request to a URL passed """
 
 import sys

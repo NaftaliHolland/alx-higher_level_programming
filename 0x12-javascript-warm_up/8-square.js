@@ -1,16 +1,15 @@
 #!/usr/bin/node
 
 const number = parseInt(process.argv[2]);
-let square = '';
 
 if (number) {
   for (let i = 0; i < process.argv[2]; i++) {
+    let line = '';
     for (let i = 0; i < process.argv[2]; i++) {
-      square += 'X';
+      line += 'X';
     }
-    square += '\n';
+    console.log(line);
   }
-  console.log(square);
 } else {
   console.log('Missing size');
 }
